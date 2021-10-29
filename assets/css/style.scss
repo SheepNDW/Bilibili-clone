@@ -1,0 +1,150 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// --- header ---
+header {
+  height: 11.73333vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.06667vw 0 4.8vw;
+
+  .navbar-logo {
+    font-size: 7.73333vw;
+    color: #fb7299;
+  }
+
+  .icon-box {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-search {
+    width: 5.06667vw;
+    height: 5.06667vw;
+    color: #ccc;
+  }
+
+  .header-login-entry {
+    width: 6.4vw;
+    height: 6.4vw;
+    border-radius: 50%;
+    color: #fb7299;
+    background: #e5e5e5;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 6.4vw;
+    font-size: 1.6vw;
+    margin-left: 5.33333vw;
+    padding: 0.66667vw;
+  }
+
+  .header-download-app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19.06667vw;
+    height: 6.26667vw;
+    margin-left: 5.33333vw;
+    border-radius: 1.06667vw;
+    background: #fb7299;
+    color: #fff;
+    text-align: center;
+    font-size: 1.86667vw;
+    line-height: 2.66667vw;
+  }
+}
+
+// --- nav ---
+nav {
+  height: 10.66667vw;
+  display: flex;
+  justify-content: space-around;
+  line-height: 10.66667vw;
+  color: #505050;
+  font-size: 3.73333vw;
+  border-bottom: 0.13333vw solid #efefef;
+  margin-bottom: 2.13333vw;
+
+  .active {
+    color: #fb7299;
+  }
+}
+
+//--- video list ---
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  // space-between貼兩側對齊
+  justify-content: space-between;
+  padding: 0 2.66667vw;
+
+  .item {
+    width: 46vw;
+    font-size: 3.2vw;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 25.86667vw;
+      border-radius: 0.53333vw;
+      // 去除圖片空隙
+      display: block;
+    }
+
+    .count-box {
+      height: 5.33333vw;
+      background: linear-gradient(rgba(0, 0, 0, 0), #000);
+      color: #fff;
+      position: absolute;
+      top: 20.53333vw;
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1.73333vw;
+      box-sizing: border-box;
+
+      > span {
+        display: flex;
+        align-items: flex-start;
+
+        .icon {
+          font-size: 3.6vw;
+          margin-right: 1.73333vw;
+        }
+      }
+    }
+
+    .title {
+      // 設置文字超出多少行就自動裁剪
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      // --------------------------
+      margin: 2.4vw 0 2.4vw;
+    }
+  }
+}
+
+// --- footer ---
+footer {
+  font-size: 3.73333vw;
+  color: #999;
+  margin: 5.33333vw 0;
+  text-align: center;
+}
+
+// --- 吸頂效果 ---
+.fixed-top {
+  // sticky 吸頂
+  position: sticky;
+  // 透過top指定距離頂部的距離
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
